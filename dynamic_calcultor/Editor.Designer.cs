@@ -34,7 +34,7 @@
             this.txtFormula = new System.Windows.Forms.RichTextBox();
             this.gridparam = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,12 +49,16 @@
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.btnNumAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.grdFormulaList = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridparam)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdFormulaList)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFormulaView
@@ -113,12 +117,12 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Parameter";
             // 
-            // textBox1
+            // txtTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(107, 21);
-            this.textBox1.TabIndex = 5;
+            this.txtTitle.Location = new System.Drawing.Point(47, 13);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(107, 21);
+            this.txtTitle.TabIndex = 5;
             // 
             // label1
             // 
@@ -254,21 +258,42 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(577, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(577, 15);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 18;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.grdFormulaList);
+            this.groupBox5.Location = new System.Drawing.Point(14, 457);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(923, 170);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Formula List";
+            // 
+            // grdFormulaList
+            // 
+            this.grdFormulaList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdFormulaList.Location = new System.Drawing.Point(15, 20);
+            this.grdFormulaList.Name = "grdFormulaList";
+            this.grdFormulaList.RowTemplate.Height = 23;
+            this.grdFormulaList.Size = new System.Drawing.Size(898, 144);
+            this.grdFormulaList.TabIndex = 0;
             // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 467);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(980, 639);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnIIF);
@@ -281,7 +306,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -294,6 +319,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdFormulaList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,7 +334,7 @@
         private System.Windows.Forms.RichTextBox txtFormula;
         private System.Windows.Forms.DataGridView gridparam;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
@@ -322,6 +349,8 @@
         private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Button btnNumAdd;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridView grdFormulaList;
     }
 }

@@ -14,12 +14,24 @@ namespace dynamic_calcultor
     public partial class Editor : Form
     {
         DataGridView _src_grd;
+        public DataTable dtFormulaList;
         public Editor(DataGridView grid)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterParent;
             _src_grd = grid;
             txtFormula.ReadOnly = txtFormulaView.ReadOnly = true;
+            InitgridFormulaList();
+        }
+
+        private void InitgridFormulaList()
+        {
+            dtFormulaList = new DataTable();
+            dtFormulaList.Columns.Add("TITLE");
+            dtFormulaList.Columns.Add("FORMULA");
+            dtFormulaList.Columns.Add("FORMULAVIEW");
+            dtFormulaList.Columns.Add("RESULTCELL");
+            grdFormulaList.DataSource = dtFormulaList;
         }
 
         private void Editor_Load(object sender, EventArgs e)
@@ -86,6 +98,11 @@ namespace dynamic_calcultor
             string name = $"[{selectedRow.Cells["NAME"].Value.ToString()}]";
             AddFormularParam(code,name);
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            dtFormulaList.Rows.Add(txtTitle.Text,txtFormula.Text,txtFormulaView.Text,comboBox1.SelectedValue.ToString());
         }
     }
 }
