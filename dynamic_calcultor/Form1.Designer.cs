@@ -28,20 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnOpenEditor = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnOpenEditor
+            // 
+            this.btnOpenEditor.Location = new System.Drawing.Point(12, 12);
+            this.btnOpenEditor.Name = "btnOpenEditor";
+            this.btnOpenEditor.Size = new System.Drawing.Size(108, 23);
+            this.btnOpenEditor.TabIndex = 0;
+            this.btnOpenEditor.Text = "Open Editor";
+            this.btnOpenEditor.UseVisualStyleBackColor = true;
+            this.btnOpenEditor.Click += new System.EventHandler(this.btnOpenEditor_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(204, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 608);
+            this.dataGridView1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 632);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnOpenEditor);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnOpenEditor;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
