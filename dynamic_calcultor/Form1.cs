@@ -73,16 +73,18 @@ namespace dynamic_calcultor
             dt.Columns.Add("funtiontitle");
             dt.Columns.Add("width");
             dt.Columns.Add("height");
-            dt.Columns.Add("formula");
-            dt.Columns.Add("formulaView");
+            //dt.Columns.Add("formula");
+            //dt.Columns.Add("formulaView");
             dt.Columns.Add("RESULT");
+            dt.Columns.Add("RESULT2");
             dataGridView1.DataSource = dt;
             dataGridView1.Columns["funtiontitle"].HeaderText = "공식";
             dataGridView1.Columns["width"].HeaderText = "가로";
             dataGridView1.Columns["height"].HeaderText = "세로";
-            dataGridView1.Columns["formula"].HeaderText = "공식(코드)";
-            dataGridView1.Columns["formulaView"].HeaderText = "공식";
+            //dataGridView1.Columns["formula"].HeaderText = "공식(코드)";
+            //dataGridView1.Columns["formulaView"].HeaderText = "공식";
             dataGridView1.Columns["RESULT"].HeaderText = "결과";
+            dataGridView1.Columns["RESULT2"].HeaderText = "결과2";
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
